@@ -9,6 +9,7 @@ import (
 
 	basecmd "github.com/cosmos/cosmos-sdk/server/commands"
 	"github.com/irisnet/iris-hub/version"
+	"github.com/irisnet/iris-hub/storage"
 )
 
 // IrisCmd is the entry point for this binary
@@ -40,6 +41,7 @@ func main() {
 
 		lineBreak,
 		version.VersionCmd,
+		storage.StorageCmd,
 		//auto.AutoCompleteCmd,
 	)
 

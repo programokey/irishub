@@ -9,7 +9,7 @@ import (
 
 	basecmd "github.com/cosmos/cosmos-sdk/server/commands"
 	"github.com/irisnet/iris-hub/version"
-	"github.com/irisnet/iris-hub/storage"
+	//"github.com/irisnet/iris-hub/storage"
 )
 
 // IrisCmd is the entry point for this binary
@@ -33,15 +33,16 @@ func main() {
 	prepareNodeCommands()
 	prepareRestServerCommands()
 	prepareClientCommands()
+	prepareStorageCommands()
 
 	IrisCmd.AddCommand(
 		nodeCmd,
 		restServerCmd,
 		clientCmd,
+		StorageCmd,
 
 		lineBreak,
 		version.VersionCmd,
-		storage.StorageCmd,
 		//auto.AutoCompleteCmd,
 	)
 

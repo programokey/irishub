@@ -8,7 +8,7 @@ import (
 
 
 const (
-	Path 		= "ipfs"
+	Module 		= "ipfs"
 	shellUrl     = "localhost:5001"
 )
 

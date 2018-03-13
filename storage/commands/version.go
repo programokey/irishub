@@ -8,7 +8,7 @@ import (
 
 
 const (
-	Path = "ipfs"
+	Path 		= "ipfs"
 	shellUrl     = "localhost:5001"
 )
 
@@ -26,6 +26,7 @@ func runVersion(cmd *cobra.Command, args []string) error {
 	s := ipfs.NewShell(shellUrl)
 
 	version, commit,err := s.Version()
+
 	if err!= nil{
 		panic(err)
 	}else{
@@ -35,17 +36,3 @@ func runVersion(cmd *cobra.Command, args []string) error {
 	}
 	return nil
 }
-
-//func GetVersion(){
-//
-//	s := ipfs.NewShell(shellUrl)
-//
-//	version, commit,err := s.Version()
-//	if err!= nil{
-//		panic(err)
-//	}else{
-//		// "QmUfZ9rAdhV5ioBzXKdUTh2ZNsz9bzbkaLVyQ8uc8pj21F")
-//		fmt.Println("get version",version,commit)
-//
-//	}
-//}

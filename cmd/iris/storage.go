@@ -24,6 +24,7 @@ func prepareStorageCommands() {
 	StorageCmd.AddCommand(
 		commands.VersionCmd,
 		commands.UploadCmd,
+		commands.DownloadCmd,
 		)
 }
 

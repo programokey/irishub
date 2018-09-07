@@ -1,6 +1,6 @@
 # Setup A Full-node
 
-Before setting up your validator node, make sure you've already installed  **Iris** by this [guide](install-iris.md)
+Before setting up your validator node, make sure you already had **Iris** installed by following this [guide](install-iris.md)
 
 ### Step 2: Setting Up Your Node
 
@@ -34,7 +34,7 @@ Your full node has been initialized!
 ### Get Configuration Files
 
 
-After the genesis file is ready, please download the genesis and the default config file.
+After intializing your node, please download the genesis file and the config file to join the testnet.
 
 ```
 cd $IRISHOME/config/
@@ -46,7 +46,7 @@ wget https://raw.githubusercontent.com/irisnet/testnets/master/testnets/fuxi-200
 
 ### Add Seed Nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$IRISHOME/config/config.toml`. Here are some seed nodes you can use:
+Your node needs to know how to find more peers. You'll need to add healthy seed nodes to `$IRISHOME/config/config.toml`. Here is a seed node you can use:
 
 ```
 c16700520a810b270206d59f0f02ea9abd85a4fe@35.165.232.141:26656
@@ -75,4 +75,4 @@ You could see the following
 ```
 {"node_info":{"id":"71b188e9fdefd939453b3cd10c0eae45a8d02a2b","listen_addr":"172.31.0.190:26656","network":"fuxi-2000","version":"0.22.6","channels":"4020212223303800","moniker":"name","other":["amino_version=0.10.1","p2p_version=0.5.0","consensus_version=v1/0.2.2","rpc_version=0.7.0/3","tx_index=on","rpc_addr=tcp://0.0.0.0:26657"]},"sync_info":{"latest_block_hash":"CC9BBE0B38643DAF3D9B78D928E2ACA654E5A39C","latest_app_hash":"56B9228A97D5B85BFDBEE020E597D45D427ABC43","latest_block_height":"30048","latest_block_time":"2018-08-02T08:23:44.566550056Z","catching_up":false},"validator_info":{"address":"F638F7EA8A8E4DA559A346E1C404F83941749713","pub_key":{"type":"tendermint/PubKeyEd25519","value":"oI16LfBmnP8CefSGwIjAIO3QZ05xwB1+s4oPIQ3Yaag="},"voting_power":"10"}}
 ```
-When you see `catching_up` is `false`, it means the node is synced with the rest of testnet, otherwise it means it's still syncing.
+When you see `catching_up` is `false`, it means the node is synced with the rest of testnet, otherwise it means it's still fetching data from other nodes.
